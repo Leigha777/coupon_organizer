@@ -2,7 +2,17 @@ body {
   background-image: url(https://upload.wikimedia.org/wikipedia/commons/4/43/Milepost_31_storefront.JPG)
 }
 
-
+#link {
+  background-color: rgba(128, 128, 130, 0.5);
+  width: 600px;
+  padding: 15px;
+  border: 1px solid white;
+  margin: auto;
+  font-family: Raleway;
+  font-size: 100%;
+  font-weight: bold;
+  border-radius: 25px;
+}
 h1 {
   font-weight:bold;
   font-size: 400%;
@@ -36,5 +46,12 @@ select {
   font-weight:bold;
   font-family: 'Raleway',serif;
   font-size: 150%
+}
+
+a:link {
+  text-decoration: none;
+}
+a:hover {
+  color: pink;
 }
 
