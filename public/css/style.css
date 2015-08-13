@@ -12,41 +12,40 @@ h1{
   font-family: Raleway Dots;
 }
 
+
 a{
   font-size: 150%;
   color: white;
   font-family: Raleway;
   margin: 30px;
 }
-#intro {
-  color: white;
-  background-color: rgba(128, 128, 130, 0.5);
+div {
+  background-color: white;
   width: 1250px;
   padding: 15px;
   border: 1px solid white;
   margin: 30px;
   font-family: Raleway;
   font-size: 150%;
+  opacity: 0.5;
   font-weight: bold;
   border-radius: 25px;
-}
 
- div {
-  background-color: rgba(128, 128, 130, 0.5);
-  width: 600px;
+div{
+  background-color: white;
+  width: 1250px;
   padding: 15px;
   border: 1px solid white;
   margin: 30px;
   font-family: Raleway;
-  font-size: 100%;
+  font-size: 150%;
+  opacity: 0.5;
   font-weight: bold;
   border-radius: 25px;
-  
 }
-
-a:link {
-  text-decoration: none;
-}
-a:hover {
-  color: pink;
+a{
+  font-family: Raleway;
+  color: white;
+  font-size: 150%;
+  margin: 30px;
 }
