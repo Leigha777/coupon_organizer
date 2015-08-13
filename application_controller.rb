@@ -12,5 +12,4 @@ class MyApp < Sinatra::Base
     erb :submission
   end
    end
-   end
 
