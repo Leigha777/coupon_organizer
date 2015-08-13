@@ -12,4 +12,8 @@ class MyApp < Sinatra::Base
     erb :submission
   end
   
- end
+  get '/view_coupons' do
+    erb :view_coupons
+  end
+   end
+
