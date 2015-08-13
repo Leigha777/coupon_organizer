@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url('http://fonts.googleapis.com/css?family=Raleway+Dots');
 @import url('http://fonts.googleapis.com/css?family=Raleway');
 body{
@@ -5,6 +6,12 @@ body{
   background-size: 1910px;
   background-repeat: no-repeat;
 }
+=======
+div {
+  background-color: #888888;
+}
+
+>>>>>>> ee5aa4a153db8388b5c19c60f62381b39e3da949
 h1{
   font-size: 400%;
   text-align: center;

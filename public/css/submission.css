@@ -1,19 +1,27 @@
+body {
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/4/43/Milepost_31_storefront.JPG)
+}
+
+
 h1 {
-  
+  font-weight:bold;
   text-align: center;
   font-family: 'Raleway Dots',serif;
 }
 h3 {
+  font-weight:bold;
   text-align: center;
   font-family: 'Raleway',serif;
 }
 
 form {
+  font-weight:bold;
   text-align: center;
   font-family: 'Raleway',serif;
 }
 
 select {
+  font-weight:bold;
   font-family: 'Raleway',serif;
 }
 
