@@ -121,9 +121,9 @@ Awall = Coupon.new("aayywa", "Craycray", "12%", "Monday")
 #Coupon.organization("discount")
 #puts Coupon.coupon_by_discount
 # puts Coupon.sort1
-######puts Coupon.alphabet
+puts Coupon.alphabet
 
-d = Date.parse('3rd Feb 2001')
-puts d.year
-puts Michaels.make_a_date.year
+# d = Date.parse('3rd Feb 2001')
+# puts d.year
+# puts Michaels.make_a_date.year
 
