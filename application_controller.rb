@@ -19,5 +19,6 @@ class MyApp < Sinatra::Base
   get '/puns' do
     erb :puns
   end
+ 
 end
 
