@@ -15,5 +15,9 @@ class MyApp < Sinatra::Base
   get '/view_coupons' do
     erb :view_coupons
   end
-   end
+  
+  get '/puns' do
+    erb :puns
+  end
+end
 
