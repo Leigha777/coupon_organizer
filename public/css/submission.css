@@ -5,6 +5,7 @@ body {
 
 h1 {
   font-weight:bold;
+  font-size: 400%;
   text-align: center;
   font-family: 'Raleway Dots',serif;
 }
@@ -16,6 +17,7 @@ h3 {
 
 form {
   font-weight:bold;
+  font-size: 150%;
   text-align: center;
   font-family: 'Raleway',serif;
 }
