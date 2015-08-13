@@ -8,4 +8,7 @@ class MyApp < Sinatra::Base
     erb :index
   end
 
+  get '/submission' do
+    erb :submission
+  end
    end
