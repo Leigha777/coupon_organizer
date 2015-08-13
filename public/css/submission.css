@@ -13,11 +13,21 @@ h3 {
   font-weight:bold;
   text-align: center;
   font-family: 'Raleway',serif;
+  font-size: 175%;
 }
 
 form {
-  font-weight:bold;
-  font-size: 150%;
+  background-color: rgba(128, 128, 130, 0.5);
+  width: 500px;
+  padding: 15px;
+  border: 1px solid white;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Raleway;
+  font-size: 175%;
+  font-weight: bold;
+  border: 1px white;
+  border-radius: 25px;
   text-align: center;
   font-family: 'Raleway',serif;
 }
@@ -25,5 +35,6 @@ form {
 select {
   font-weight:bold;
   font-family: 'Raleway',serif;
+  font-size: 150%
 }
 

@@ -12,6 +12,7 @@ h1{
   font-family: Raleway Dots;
 }
 
+<<<<<<< HEAD
 a{
   font-size: 150%;
   color: white;
@@ -29,4 +30,23 @@ div {
   opacity: 0.5;
   font-weight: bold;
   border-radius: 25px;
+=======
+div{
+  background-color: white;
+  width: 1250px;
+  padding: 15px;
+  border: 1px solid white;
+  margin: 30px;
+  font-family: Raleway;
+  font-size: 150%;
+  opacity: 0.5;
+  font-weight: bold;
+  border-radius: 25px;
+}
+a{
+  font-family: Raleway;
+  color: white;
+  font-size: 150%;
+  margin: 30px;
+>>>>>>> 8776f6a1927d64c1750eaee6765949af72394553
 }
