@@ -1,4 +1,7 @@
 # require 'date'
+require 'erb'
+require 'ostruct'
+
 class Coupon
     @@coupon_just_names = []
     @@coupon_by_name = {}
@@ -15,10 +18,11 @@ class Coupon
        :electronics => {},
        :supplies => {},
        :funiture => {},
+       :cosmetic => {},
        :other => {}
       }
    
-   attr_reader :type, :store, :discount_amount, :expiration_date, :alphabetical, :by_store, :discount, :expiration,
+   attr_reader :type, :store, :discount_amount, :expiration_date, :alphabetical, :by_store, :discount, :expiration, :name, :description
    
    
    def Coupon.list
@@ -43,21 +47,34 @@ class Coupon
 
 #       string = @@coupon_by_discount[:percent].sort_by { |discount, info| discount }
       @@coupon_by_discount[:percent].each do |discount, info| #why doesn't this print everything out? 
-         return "Percent: " + discount.to_s + "=" + info
-      end    
+          "Percent: " + discount.to_s + "\n" + info
+      end    # if you put in return it will end the cycle and would only print one line
    end
    
-   def Coupon.sort1
-      @@coupon_by_discount[:percent].sort_by { |discount, info| discount }
+   def Coupon.sort_percent
+      @@coupon_by_discount[:percent].sort_by do |discount, info| 
+         discount
+      end
    end
-   def Coupon.ex
+   
+   
+   def Coupon.sort_dollar
+      @@coupon_by_discount[:dollars_off].sort_by do |discount, info| 
+         discount
+      end
+   end
+#    Hash[h.sort_by{|k, v| v}.reverse]
+   def Coupon.expiration
       @@coupon_by_expiration.sort_by { |date, info| date }
    end
    def Coupon.alphabet
       @@coupon_by_name.sort_by { |name, info| name }
    end #AHHHH IT WORKS THIS IS FOR SUREEE
+   def Coupon.store
+      @@coupon_by_store.sort_by { |store, info| store }
+   end
    
-      def initialize(name, store, discount_amount, expiration_date, type, description = "none")
+   def initialize(name, store, discount_amount, expiration_date, type = "Other", description = "none")
       @name = name
       @store = store 
       @discount_amount = discount_amount
@@ -81,6 +98,8 @@ class Coupon
          @@coupon_by_type[:supplies][type] = display_everything
       elsif type == "Furniture"
          @@coupon_by_type[:furniture][type] = display_everything
+      elsif type == "Cosmetic"
+         @@coupon_by_type[:cosmetic][type] = display_everything
       else
          @@coupon_by_type[:other][type] = display_everything
       end
@@ -97,10 +116,10 @@ class Coupon
    end
    
    def organization(type)
-   if type == "discount"
-      @@coupon_by_discount.sort_by { |k, v| v[:percent] }
+      if type == "discount"
+         @@coupon_by_discount.sort_by { |k, v| v[:percent] }
+      end
    end
-end
    @@date = nil
    def display_everything
       return "  Coupon name: #{@name}
@@ -121,27 +140,32 @@ end
 end
 
 
-Michaels = Coupon.new("paint", "Michaels", "20%", "1997/02/09", "Food")
-Target = Coupon.new("dogs", "Target", "$3", "2007/02/09", "Other") #why is this displayed as a ZERO?????? 
-Best = Coupon.new("best", "bestbuy", "4%", "2019/12/2", "Other")
-Waywward = Coupon.new("nice", "Wa", "$13", "1997/12/02", "Electronics")
-Awall = Coupon.new("aayywa", "Craycray", "12%", "1923/12/03", "Office Supplies")
+# Michaels = Coupon.new("paint", "Michaels", "20%", "1997/02/09", "Food")
+# Target = Coupon.new("dogs", "Target", "$3", "2007/02/09", "Other")  
+# Best = Coupon.new("best", "bestbuy", "4%", "2019/12/2", "Other")
+# Waywward = Coupon.new("nice", "Wa", "$13", "1997/12/02", "Electronics")
+# Awall = Coupon.new("aayywa", "Craycray", "12%", "1923/12/03", "Office Supplies")
 
 #puts Coupon.coupon_by_name
 #puts Coupon.coupon_by_name
 # puts Target.expiration_date
 
+# puts Coupon.coupon_by_discount
+# puts Coupon.sort_percent
+# puts Coupon.sort_dollar
+# puts Coupon.coupon_by_discount
+#puts Coupon.alphabet
+#puts Coupon.store
+
 #Coupon.organization("discount")
 #puts Coupon.coupon_by_discount
+#
 # puts Coupon.sort1
-<<<<<<< HEAD
-puts Coupon.alphabet
+#puts Coupon.alphabet
 
 # d = Date.parse('3rd Feb 2001')
 # puts d.year
 # puts Michaels.make_a_date.year
 
-=======
 #puts Coupon.alphabet
-puts Coupon.ex
->>>>>>> 3fb9b4ac03b2f6baa318fe6fc45f95ab41d21cb0
+#puts Coupon.expiration
