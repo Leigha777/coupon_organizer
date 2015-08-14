@@ -36,7 +36,9 @@ class Coupon
    def Coupon.coupon_by_expiration
       return @@coupon_by_expiration
    end
-
+  def Coupon.coupon_by_type
+    return @@coupon_by_type
+  end
    
    
    def Coupon.coupon_by_discount
@@ -89,7 +91,7 @@ class Coupon
       
       if type == "Food"
          @@coupon_by_type[:food][type] = display_everything
-      elsif type == "Clothings"
+      elsif type == "Clothing"
          @@coupon_by_type[:clothing][type] = display_everything
       elsif type == "Electronics"
          @@coupon_by_type[:electronics][type] = display_everything
@@ -145,16 +147,16 @@ end
 # Waywward = Coupon.new("nice", "Wa", "$13", "1997/12/02", "Electronics")
 # Awall = Coupon.new("aayywa", "Craycray", "12%", "1923/12/03", "Office Supplies")
 
-#puts Coupon.coupon_by_name
-#puts Coupon.coupon_by_name
+# puts Coupon.coupon_by_name
+# puts Coupon.coupon_by_name
 # puts Target.expiration_date
 
 # puts Coupon.coupon_by_discount
 # puts Coupon.sort_percent
 # puts Coupon.sort_dollar
 # puts Coupon.coupon_by_discount
-#puts Coupon.alphabet
-#puts Coupon.store
+# puts Coupon.alphabet
+# puts Coupon.store
 
 #Coupon.organization("discount")
 #puts Coupon.coupon_by_discount
