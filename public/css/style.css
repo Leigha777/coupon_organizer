@@ -53,18 +53,4 @@ a:hover {
   color: pink;
 }
 
-h4 {
-  background-color: rgba(128, 128, 130, 0.5);
-  width: 1250px;
-  padding: 15px;
-  border: 1px solid white;
-  margin-top: 40px;
-  margin-bottom: 40px;
-  margin-left: auto;
-  margin-right: auto;
-  font-family: Raleway;
-  font-size: 150%;
-  font-weight: bold;
-  border-radius: 25px;
-  color: white;
-}
+
