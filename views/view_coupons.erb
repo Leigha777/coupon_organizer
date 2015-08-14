@@ -9,7 +9,106 @@
  </head>
  <body>
    <h1>Submitted Coupons</h1>
-   <hr>
-   
+    
+    <p> Coupon name: <%= Cutepun.name %>
+       <br>
+       Discount: <%= Cutepun.discount_amount %>
+       <br>
+       Expiration Date: <%= Cutepun.expiration_date %>
+       <br>
+       Store: <%= Cutepun.store %>
+       <br>
+       Type: <%= Cutepun.type %>
+       <br>
+       Description: <%= Cutepun.description %>
+    </p>
+    <p> Coupon name: <%= Cutepun2.name %>
+       <br>
+       Discount: <%= Cutepun2.discount_amount %>
+       <br>
+       Expiration Date: <%= Cutepun2.expiration_date %>
+       <br>
+       Store: <%= Cutepun2.store %>
+       <br>
+       Type: <%= Cutepun2.type %>
+       <br>
+       Description: <%= Cutepun3.description %>
+           <br><br>
+     <p> Coupon name: <%= Cutepun2.name %>
+       <br>
+       Discount: <%= Cutepun2.discount_amount %>
+       <br>
+       Expiration Date: <%= Cutepun2.expiration_date %>
+       <br>
+           Store: <%= Cutepun3.store %>
+       <br>
+       Type: <%= Cutepun3.type %>
+       <br>
+       Description: <%= Cutepun3.description %>
+           <br><br>
+     </p>
+           
+           
+      <p>     
+        
+           <br><br>
+<!--           <%= Coupon.coupon_by_name %> (the thing is not in order unless you call on this, like having called on the method before in the application_controller does not order the list for you, you have to call on the sort method inside to sort the thing out)
+           <br><br>
+          <%= Coupon.coupon_by_expiration %>
+           <br><br>
+          <%= Coupon.coupon_by_discount %> -->
+         Alphabetize
+         <% Coupon.alphabet.each do |name, details| %>  
+             <div class="row">
+                 <div class="span12">
+                    <h2><%= details %></h2>
+                  </div>
+             </div>
+         <% end %> 
+             <br><br><br><br>
+    
+         Expiration Date:
+         <% Coupon.expiration.each do |date, details| %>  
+             <div class="row">
+                 <div class="span12">
+                    <h2><%= date + details %></h2>
+                  </div>
+             </div>
+         <% end %> 
+           <br><br><br><br>
+         Store:
+       <% Coupon.store.each do |store, details| %>  
+             <div class="row">
+                 <div class="span12">
+                    <h2><%= store + details %></h2>
+                  </div>
+             </div>
+         <% end %> 
+           <br><br><br><br>
+         
+           Dollars off:
+          <% Coupon.sort_dollar.each do |dollar, details| %>  
+             <div class="row">
+                 <div class="span12">
+                    <h2><%= "$" + dollar.to_s + details %></h2>
+                  </div>
+             </div>
+          <% end %>
+         <br>
+         Percent: 
+         <% Coupon.sort_percent.each do |percent, details| %>  
+                   <div class="row">
+                       <div class="span12">
+                          <h2><%= percent.to_s + "%" + details %></h2>
+                        </div>
+                   </div>
+          <% end %>
+           <br><br>
+        
+    <br><br><br>
+    
+         
+    </p>
+   <a href="organize" id="link">Click here to view your alphabetized coupons</a> 
  </body>
 </html>
