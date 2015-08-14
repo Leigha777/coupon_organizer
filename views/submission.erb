@@ -13,15 +13,17 @@
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Raleway+Dots">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Raleway">
   
- </head>
-   <body>
      <div>
       <h1>Kuponki</h1>
      </div>
      <div>
         <h3>Please enter your coupon information below:</h2>
      </div>
+<<<<<<< HEAD
+   <form method = "POST" action= "/submission">
+=======
    <form method="POST" action="/submission">
+>>>>>>> 8b3262b58298af5b602605bab97ad1152aa71843
       Store Name:<br>
       <input type="text" name="store_name" placeholder = "Store Name">
       <br><br>
@@ -34,23 +36,102 @@
       Discount:<br>
       <input type="text" name="firstname" placeholder = "Discount">
       <br><br>
-      Item:<br>
+      Item:<br> 
+<!--       WE HAVE TO FIX THE TYPE PART WITH THE TYPE THING -->
       <select> 
+         <div>
         <option value="" disabled = "disabled" selected="selected">Choose an item</option>
-        <option value="Food">Food</option>
-        <option value="Clothing">Clothing</option>
-        <option value="Electronics">Electronics</option>
-        <option value="Cosmetics">Cosmetics</option>
-        <option value="Office Supplies">Office Supplies</option>
-        <option value="Furniture">Furniture</option>
-        <option value="Other">Other</option>
+        <option value="Food" name="type">Food</option>
+        <option value="Clothing" name="type">Clothing</option>
+        <option value="Electronics" name="type">Electronics</option>
+        <option value="Cosmetics" name="type">Cosmetics</option>
+        <option value="Office Supplies" name="type">Office Supplies</option>
+        <option value="Furniture" name="type">Furniture</option>
+        <option value="Other" name="type">Other</option>
+         </div>
       </select><br><br>
       Additional Notes:<br>
-       <input type="text">
+       <input type="text" name="description">
+
+      
+      
+      
      <br><br>
+<<<<<<< HEAD
+       <h3>Please enter your coupon information below:</h2>
+     </div>
+   <form method = "POST" action= "/submission">
+      Store Name:<br>
+      <input type="text" name="store_name1" placeholder = "Store Name">
+      <br><br>
+      Coupon Name:<br>
+      <input type="text" name="coupon_name1" placeholder = "Coupon Name"> <!--Should make optional--->
+      <br><br>
+      Expiration Date:<br>
+      <input type="text" name="exp_date1" placeholder = "yy/mm/dd">
+      <br><br>
+      Discount:<br>
+      <input type="text" name="firstname1" placeholder = "Discount">
+      <br><br>
+      Item:<br> 
+      <select> 
+         <div>
+        <option value="" disabled = "disabled" selected="selected">Choose an item</option>
+        <option value="Food" name="type">Food</option>
+        <option value="Clothing" name="type">Clothing</option>
+        <option value="Electronics" name="type">Electronics</option>
+        <option value="Cosmetics" name="type">Cosmetics</option>
+        <option value="Office Supplies" name="type">Office Supplies</option>
+        <option value="Furniture" name="type">Furniture</option>
+        <option value="Other" name="type">Other</option>
+         </div>
+      </select><br><br>
+      Additional Notes:<br>
+       <input type="text" name="description1">
+      
+      
+      <br>
+      
+      <br><br>
+       <h3>Please enter your coupon information below:</h2>
+      <form method = "POST" action= "/submission">
+      Store Name:<br>
+      <input type="text" name="store_name2" placeholder = "Store Name">
+      <br><br>
+      Coupon Name:<br>
+      <input type="text" name="coupon_name2" placeholder = "Coupon Name"> <!--Should make optional--->
+      <br><br>
+      Expiration Date:<br>
+      <input type="text" name="exp_date2" placeholder = "yy/mm/dd">
+      <br><br>
+      Discount:<br>
+      <input type="text" name="firstname2" placeholder = "Discount">
+      <br><br>
+      Item:<br> 
+      <select> 
+         <div>
+        <option value="" disabled = "disabled" selected="selected">Choose an item</option>
+        <option value="Food" name="type">Food</option>
+        <option value="Clothing" name="type">Clothing</option>
+        <option value="Electronics" name="type">Electronics</option>
+        <option value="Cosmetics" name="type">Cosmetics</option>
+        <option value="Office Supplies" name="type">Office Supplies</option>
+        <option value="Furniture" name="type">Furniture</option>
+        <option value="Other" name="type">Other</option>
+         </div>
+      </select><br><br>
+      Additional Notes:<br>
+       <input type="text" name="description2">
+         
+         <br><br>
+      <input type="submit">
+    </form>
+   <a href="view_coupons" id="link">Click here to view your submitted coupons</a> 
+=======
       <input type="submit" onclick= "alert('Your coupon has been successfuly submitted!')">
      <br><br>
     </form>
     <a href="view_coupons" id="link">Click here to view your submitted coupons</a> 
+>>>>>>> 8b3262b58298af5b602605bab97ad1152aa71843
   </body>
 </html>
