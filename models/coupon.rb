@@ -121,11 +121,11 @@ class Coupon
    end
    @@date = nil
    def display_everything
-      return "  Coupon name: #{@name}
-  Store: #{@store}
-  Discount Amount: #{@discount_amount}
-  Expiration Date: #{@expiration_date}
-  Type: #{@type}
+      return "  Coupon name: #{@name};
+  Store: #{@store};
+  Discount Amount: #{@discount_amount};
+  Expiration Date: #{@expiration_date};
+  Type: #{@type};
   Other Descriptions: #{@description}"
    end
 #    def make_a_date

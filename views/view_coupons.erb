@@ -9,7 +9,7 @@
  </head>
  <body>
    <h1>Submitted Coupons</h1>
-    
+    <div class="top">
     <p> Coupon name: <%= Cutepun.name %>
        <br>
        Discount: <%= Cutepun.discount_amount %>
@@ -33,7 +33,8 @@
        Type: <%= Cutepun2.type %>
        <br>
        Description: <%= Cutepun3.description %>
-           <br><br>
+           <br>
+      </p>
      <p> Coupon name: <%= Cutepun2.name %>
        <br>
        Discount: <%= Cutepun2.discount_amount %>
@@ -45,19 +46,18 @@
        Type: <%= Cutepun3.type %>
        <br>
        Description: <%= Cutepun3.description %>
-           <br><br>
+       
      </p>
-           
-           
-      <p>     
+    </div>
+         
         
-           <br><br>
 <!--           <%= Coupon.coupon_by_name %> (the thing is not in order unless you call on this, like having called on the method before in the application_controller does not order the list for you, you have to call on the sort method inside to sort the thing out)
            <br><br>
           <%= Coupon.coupon_by_expiration %>
            <br><br>
           <%= Coupon.coupon_by_discount %> -->
-         Alphabetize
+  <p>
+   <h2>Alphabetize:</h2>
          <% Coupon.alphabet.each do |name, details| %>  
              <div class="row">
                  <div class="span12">
@@ -67,7 +67,7 @@
          <% end %> 
              <br><br><br><br>
     
-         Expiration Date:
+   <h2>Expiration Date:</h2>
          <% Coupon.expiration.each do |date, details| %>  
              <div class="row">
                  <div class="span12">
@@ -76,7 +76,7 @@
              </div>
          <% end %> 
            <br><br><br><br>
-         Store:
+      <h2>Store:</h2>
        <% Coupon.store.each do |store, details| %>  
              <div class="row">
                  <div class="span12">
@@ -86,16 +86,16 @@
          <% end %> 
            <br><br><br><br>
          
-           Dollars off:
-          <% Coupon.sort_dollar.each do |dollar, details| %>  
+       <h2>Dollars off:</h2>
+         <% Coupon.sort_dollar.each do |dollar, details| %>  
              <div class="row">
                  <div class="span12">
                     <h2><%= "$" + dollar.to_s + details %></h2>
                   </div>
-             </div>
+         </div>
           <% end %>
          <br>
-         Percent: 
+   <h2>Percent:</h2>
          <% Coupon.sort_percent.each do |percent, details| %>  
                    <div class="row">
                        <div class="span12">
@@ -106,7 +106,6 @@
            <br><br>
         
     <br><br><br>
-    
          
     </p>
    <a href="organize" id="link">Click here to view your alphabetized coupons</a> 

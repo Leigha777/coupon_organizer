@@ -2,14 +2,28 @@ h1{
   font-size: 400%;
   text-align: center;
   font-family: Raleway Dots;
+  color: white;
 }
 
-hr { 
-    display: block;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    margin-left: auto;
-    margin-right: auto;
-    border-style: inset;
-    border-width: 10px;
+body{
+  font-family: Raleway;
+  font-size: 110%;
+  background-image: url("cute.jpg");
+  background-size: contain;
+}
+.top{
+  font-weight: bold;
+  font-size: 135%;
+}
+p{
+  text-align: left;
+  font-family: Raleway;
+  font-size: 125%;
+  color: black;
+  background-color: rgba(255,255,225,0.5);
+  width: 540px;
+  padding: 20px;
+  border: 1px solid white;
+  margin: 30px;
+  border-radius: 15px;
 }
