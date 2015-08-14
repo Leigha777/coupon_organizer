@@ -12,30 +12,51 @@ class MyApp < Sinatra::Base
       erb :submission
    end
    
-  post '/submission' do
+   post '/submission1' do
     
      puts params
-     Cutepun = Coupon.new(params[:coupon_name], params[:store_name], params[:firstname], params[:exp_date], params[:type], params[:description])
-     Cutepun2 = Coupon.new(params[:coupon_name1], params[:store_name1], params[:firstname1], params[:exp_date1], params[:type], params[:description1])
-     Cutepun3 = Coupon.new(params[:coupon_name2], params[:store_name2], params[:firstname2], params[:exp_date2], params[:type], params[:description2])
-#      Coupon.alphabet
-#      Coupon.expiration
-#      Coupon.store
-#      Coupon.sort_dollar
-#      Coupon.sort_percent
-     erb :view_coupons
+     @cutepun = Coupon.new(params[:coupon_name], params[:store_name], params[:firstname], params[:exp_date], params[:type], params[:description])
+     erb :submission1
  end
    
-#    post '/submission' do  
-#    Coupon.alphabet
-#       erb :organize
-# end
-
    
-#    get '/organize' do  
-#    Coupon.alphabet
-#       erb :organize
-#    end
+   post '/submission2' do 
+       puts params
+      @cutepun = params[:coupon]
+      cute = @cutepun.split("/")
+      @cutepun = Coupon.new(cute[0], cute[1], cute[2], cute[3], cute[4], cute[5])
+    @cutepun1 = Coupon.new(params[:coupon_name], params[:store_name], params[:firstname], params[:exp_date], params[:type], params[:description])
+      erb :submission2
+end
+   post '/view_coupons' do 
+       puts params
+    @cutepun = params[:coupon]
+      cute = @cutepun.split("/")
+      @cutepun = Coupon.new(cute[0], cute[1], cute[2], cute[3], cute[4], cute[5])
+    @cutepun1 = params[:coupon1]
+      cute1 = @cutepun1.split("/")
+      @cutepun1 = Coupon.new(cute1[0], cute1[1], cute1[2], cute1[3], cute1[4], cute1[5])
+    @cutepun2 = Coupon.new(params[:coupon_name], params[:store_name], params[:firstname], params[:exp_date], params[:type], params[:description])
+      erb :view_coupons
+end
+   
+   post '/view_coupon2' do 
+       puts params
+    @cutepun = params[:coupon]
+      cute = @cutepun.split("/")
+      @cutepun = Coupon.new(cute[0], cute[1], cute[2], cute[3], cute[4], cute[5])
+       @cutepun1 = Coupon.new(params[:coupon_name], params[:store_name], params[:firstname], params[:exp_date], params[:type], params[:description])
+      erb :view_coupons
+   end
+   
+  
+      
+   get '/submission1' do
+      erb :return2
+   end
+   get '/submission2' do
+      erb :return
+   end
    
    
    
@@ -48,11 +69,11 @@ class MyApp < Sinatra::Base
 
 #   end
    
-#    get '/view_coupons' do
+   get '/view_coupons' do
     
-#     erb :view_coupons
+      erb :return
 
-#    end
+   end
   
    
    
@@ -60,10 +81,4 @@ class MyApp < Sinatra::Base
   get '/puns' do
     erb :puns
   end
-  
-  get '/about' do
-    erb :about
-  end
 end
-
-

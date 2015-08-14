@@ -16,7 +16,7 @@ class Coupon
        :clothing => {},
        :electronics => {},
        :supplies => {},
-       :funiture => {},
+       :furniture => {},
        :cosmetic => {},
        :other => {}
       }
@@ -36,9 +36,7 @@ class Coupon
    def Coupon.coupon_by_expiration
       return @@coupon_by_expiration
    end
-  def Coupon.coupon_by_type
-    return @@coupon_by_type
-  end
+
    
    
    def Coupon.coupon_by_discount
@@ -64,6 +62,33 @@ class Coupon
          discount
       end
    end
+   
+   def Coupon.miscellaneous
+      @@coupon_by_discount[:miscellaneous]
+   end
+   def Coupon.food
+      @@coupon_by_type[:food]
+   end
+    def Coupon.clothing
+      @@coupon_by_type[:clothing]
+   end
+   def Coupon.electronics
+      @@coupon_by_type[:electronics]
+   end
+   def Coupon.supplies
+      @@coupon_by_type[:supplies]
+   end
+   def Coupon.furniture
+      @@coupon_by_type[:furniture]
+   end
+   def Coupon.cosmetic
+      @@coupon_by_type[:cosmetic]
+   end
+   def Coupon.other
+      @@coupon_by_type[:other]
+   end
+   
+      
 #    Hash[h.sort_by{|k, v| v}.reverse]
    def Coupon.expiration
       @@coupon_by_expiration.sort_by { |date, info| date }
@@ -76,8 +101,8 @@ class Coupon
    end
    
    def initialize(name, store, discount_amount, expiration_date, type = "Other", description = "none")
-      @name = name
-      @store = store 
+      @name = name.capitalize
+      @store = store.capitalize
       @discount_amount = discount_amount
       @expiration_date = expiration_date
       @type = type
@@ -91,7 +116,7 @@ class Coupon
       
       if type == "Food"
          @@coupon_by_type[:food][type] = display_everything
-      elsif type == "Clothing"
+      elsif type == "Clothings"
          @@coupon_by_type[:clothing][type] = display_everything
       elsif type == "Electronics"
          @@coupon_by_type[:electronics][type] = display_everything
@@ -123,12 +148,15 @@ class Coupon
    end
    @@date = nil
    def display_everything
-      return "  Coupon name: #{@name};
-  Store: #{@store};
-  Discount Amount: #{@discount_amount};
-  Expiration Date: #{@expiration_date};
-  Type: #{@type};
-  Other Descriptions: #{@description}"
+      return "  Coupon name: #{@name}
+  Store: #{@store}
+  Discount Amount: #{@discount_amount}
+  Expiration Date: #{@expiration_date}
+  Type: #{@type}
+Other Descriptions: #{@description}"
+   end
+   def all_info
+      return "#{@name}/#{@store}/#{@discount_amount}/#{@expiration_date}/#{@type}/#{@description}"
    end
 #    def make_a_date
 #       @expiration_date = @@date
@@ -147,16 +175,16 @@ end
 # Waywward = Coupon.new("nice", "Wa", "$13", "1997/12/02", "Electronics")
 # Awall = Coupon.new("aayywa", "Craycray", "12%", "1923/12/03", "Office Supplies")
 
-# puts Coupon.coupon_by_name
-# puts Coupon.coupon_by_name
+#puts Coupon.coupon_by_name
+#puts Coupon.coupon_by_name
 # puts Target.expiration_date
 
 # puts Coupon.coupon_by_discount
 # puts Coupon.sort_percent
 # puts Coupon.sort_dollar
 # puts Coupon.coupon_by_discount
-# puts Coupon.alphabet
-# puts Coupon.store
+#puts Coupon.alphabet
+#puts Coupon.store
 
 #Coupon.organization("discount")
 #puts Coupon.coupon_by_discount
@@ -169,4 +197,6 @@ end
 # puts Michaels.make_a_date.year
 
 #puts Coupon.alphabet
+
 #puts Coupon.expiration
+

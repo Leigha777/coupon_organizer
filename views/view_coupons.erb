@@ -9,105 +9,137 @@
  </head>
  <body>
    <h1>Submitted Coupons</h1>
-    <div class="top">
-       Coupon name: <%= Cutepun.name %>
-       <br>
-       Discount: <%= Cutepun.discount_amount %>
-       <br>
-       Expiration Date: <%= Cutepun.expiration_date %>
-       <br>
-       Store: <%= Cutepun.store %>
-       <br>
-       Type: <%= Cutepun.type %>
-       <br>
-       Description: <%= Cutepun.description %>
-   </div>
-   <div class="top">
-     Coupon name: <%= Cutepun2.name %>
-       <br>
-       Discount: <%= Cutepun2.discount_amount %>
-       <br>
-       Expiration Date: <%= Cutepun2.expiration_date %>
-       <br>
-       Store: <%= Cutepun2.store %>
-       <br>
-       Type: <%= Cutepun2.type %>
-       <br>
-       Description: <%= Cutepun3.description %>
-           <br>
-   </div>
-   <div class ="top">
-   Coupon name: <%= Cutepun2.name %>
-       <br>
-       Discount: <%= Cutepun2.discount_amount %>
-       <br>
-       Expiration Date: <%= Cutepun2.expiration_date %>
-       <br>
-           Store: <%= Cutepun3.store %>
-       <br>
-       Type: <%= Cutepun3.type %>
-       <br>
-       Description: <%= Cutepun3.description %>
-   </div>
-         
+
         
+           <br><br>
 <!--           <%= Coupon.coupon_by_name %> (the thing is not in order unless you call on this, like having called on the method before in the application_controller does not order the list for you, you have to call on the sort method inside to sort the thing out)
            <br><br>
           <%= Coupon.coupon_by_expiration %>
            <br><br>
           <%= Coupon.coupon_by_discount %> -->
-  <p>
-   <h2>Alphabetize:</h2>
+         Alphabetize
          <% Coupon.alphabet.each do |name, details| %>  
              <div class="row">
                  <div class="span12">
-                    <h4><%= details %></h4>
+                    <h2><%= details %></h2>
                   </div>
              </div>
          <% end %> 
              <br><br><br><br>
     
-   <h2>Expiration Date:</h2>
+         Expiration Date:
          <% Coupon.expiration.each do |date, details| %>  
              <div class="row">
                  <div class="span12">
-                    <h4><%= date + details %></h4>
+                    <h2><%= date + details %></h2>
                   </div>
              </div>
          <% end %> 
            <br><br><br><br>
-      <h2>Store:</h2>
+         Store:
        <% Coupon.store.each do |store, details| %>  
              <div class="row">
                  <div class="span12">
-                    <h4><%= store + details %></h4>
+                    <h2><%= store + details %></h2>
                   </div>
              </div>
          <% end %> 
            <br><br><br><br>
          
-       <h2>Dollars off:</h2>
-         <% Coupon.sort_dollar.each do |dollar, details| %>  
+           Dollars off:
+          <% Coupon.sort_dollar.each do |dollar, details| %>  
              <div class="row">
                  <div class="span12">
-                    <h4><%= "$" + dollar.to_s + details %></h4>
+                    <h2><%= "$" + dollar.to_s + details %></h2>
                   </div>
-         </div>
+             </div>
           <% end %>
          <br>
-   <h2>Percent:</h2>
+         Percent: 
          <% Coupon.sort_percent.each do |percent, details| %>  
                    <div class="row">
                        <div class="span12">
-                          <h4><%= percent.to_s + "%" + details %></h4>
+                          <h2><%= percent.to_s + "%" + details %></h2>
                         </div>
                    </div>
           <% end %>
-           <br><br>
+          <br>
+    Other: 
+         <% Coupon.miscellaneous.each do |thing, details| %>  
+                   <div class="row">
+                       <div class="span12">
+                          <h2><%= thing.to_s + ": " + details %></h2>
+                        </div>
+                   </div>
+          <% end %>
+           <br><br><br><br><br><br>
+    Food:
+    <% Coupon.food.each do |thing, details| %>  
+                   <div class="row">
+                       <div class="span12">
+                          <h2><%= thing.to_s + ": " + details %></h2>
+                        </div>
+                   </div>
+          <% end %>
+        <br><br>
+    Clothing
+    <% Coupon.clothing.each do |thing, details| %>  
+                   <div class="row">
+                       <div class="span12">
+                          <h2><%= thing.to_s + ": " + details %></h2>
+                        </div>
+                   </div>
+          <% end %>
+    <br><br>
+    Electronics
+    <% Coupon.electronics.each do |thing, details| %>  
+                   <div class="row">
+                       <div class="span12">
+                          <h2><%= thing.to_s + ": " + details %></h2>
+                        </div>
+                   </div>
+          <% end %>
+    <br><br>
+    Supplies
+    <% Coupon.supplies.each do |thing, details| %>  
+                   <div class="row">
+                       <div class="span12">
+                          <h2><%= thing.to_s + ": " + details %></h2>
+                        </div>
+                   </div>
+          <% end %>
+    <br><br>
+    Furniture
+    <% Coupon.furniture.each do |thing, details| %>  
+                   <div class="row">
+                       <div class="span12">
+                          <h2><%= details %></h2>
+                        </div>
+                   </div>
+          <% end %>
+    <br><br>
+    Cosmetic
+    <% Coupon.cosmetic.each do |thing, details| %>  
+                   <div class="row">
+                       <div class="span12">
+                          <h2><%= thing.to_s + ": " + details %></h2>
+                        </div>
+                   </div>
+          <% end %>
+    <br><br>
+    Others
+    <% Coupon.other.each do |thing, details| %>  
+                   <div class="row">
+                       <div class="span12">
+                          <h2><%= thing.to_s + ": " + details %></h2>
+                        </div>
+                   </div>
+          <% end %>
+    
     <br><br><br>
+    
          
-
     </p>
-   <!--<a href="organize" id="link">Click here to view your alphabetized coupons</a>-->
+   <a href="index" id="link">Renter Coupons</a> 
  </body>
 </html>

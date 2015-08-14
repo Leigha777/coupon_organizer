@@ -19,8 +19,9 @@
      <div>
         <h3>Please enter your coupon information below:</h2>
      </div>
-
-   <form method = "POST" action= "/submission1">
+<!--    <form method = "POST" action= "/view_coupons2"> -->
+   <form method = "POST" action= "/submission2">
+      <input type="hidden" value="<%= @cutepun.all_info%>" name="coupon"><br>
 
 
       Store Name:<br>
@@ -52,4 +53,4 @@
        <input type="text" name="description">
       <br><br>
       <input type="submit" onclick= "alert('Your coupon has been successfuly submitted!')">
-
+      <a href= "view_coupons2"> <input type="submit" value= "Finished"> <a>
