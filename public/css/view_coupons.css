@@ -2,13 +2,13 @@ h1{
   font-size: 400%;
   text-align: center;
   font-family: Raleway Dots;
-  color: white;
+  color: black;
 }
 
 body{
   font-family: Raleway;
   font-size: 110%;
-  background-image: url("cute.jpg");
+  background-image: url(https://sallanscorner.files.wordpress.com/2011/07/nyc-storefront-2.jpg);
   background-size: contain;
 }
 div {
@@ -30,7 +30,8 @@ div {
 
 h2 {
   font-size: 300%;
-  color: white;
+  color: black;
+  font-weight: bold;
   font-family: Raleway Dots;
 }
 .span12{
