@@ -9,8 +9,9 @@
  </head>
  <body>
    <h1>Submitted Coupons</h1>
+   <!--FIRST COUPON-->
     <div class="top">
-    <p> Coupon name: <%= Cutepun.name %>
+     Coupon name: <%= Cutepun.name %>
        <br>
        Discount: <%= Cutepun.discount_amount %>
        <br>
@@ -21,8 +22,10 @@
        Type: <%= Cutepun.type %>
        <br>
        Description: <%= Cutepun.description %>
-    </p>
-    <p> Coupon name: <%= Cutepun2.name %>
+   </div>
+   <!--SECOND COUPON-->
+   <div class="top">
+    Coupon name: <%= Cutepun2.name %>
        <br>
        Discount: <%= Cutepun2.discount_amount %>
        <br>
@@ -34,23 +37,23 @@
        <br>
        Description: <%= Cutepun3.description %>
            <br>
-      </p>
-     <p> Coupon name: <%= Cutepun2.name %>
+     </div>
+   <!--THIRD COUPON-->
+   <div class="top">
+       Coupon name: <%= Cutepun2.name %>
        <br>
        Discount: <%= Cutepun2.discount_amount %>
        <br>
        Expiration Date: <%= Cutepun2.expiration_date %>
        <br>
-           Store: <%= Cutepun3.store %>
+       Store: <%= Cutepun3.store %>
        <br>
        Type: <%= Cutepun3.type %>
        <br>
        Description: <%= Cutepun3.description %>
-       
-     </p>
     </div>
          
-        
+        <!--SORTING SORTING SORTING-->
 <!--           <%= Coupon.coupon_by_name %> (the thing is not in order unless you call on this, like having called on the method before in the application_controller does not order the list for you, you have to call on the sort method inside to sort the thing out)
            <br><br>
           <%= Coupon.coupon_by_expiration %>
@@ -61,7 +64,7 @@
          <% Coupon.alphabet.each do |name, details| %>  
              <div class="row">
                  <div class="span12">
-                    <h2><%= details %></h2>
+                    <h4><%= details %></h4>
                   </div>
              </div>
          <% end %> 
@@ -71,7 +74,7 @@
          <% Coupon.expiration.each do |date, details| %>  
              <div class="row">
                  <div class="span12">
-                    <h2><%= date + details %></h2>
+                    <h4><%= date + details %></h4>
                   </div>
              </div>
          <% end %> 
@@ -80,7 +83,7 @@
        <% Coupon.store.each do |store, details| %>  
              <div class="row">
                  <div class="span12">
-                    <h2><%= store + details %></h2>
+                    <h4><%= store + details %></h4>
                   </div>
              </div>
          <% end %> 
@@ -90,7 +93,7 @@
          <% Coupon.sort_dollar.each do |dollar, details| %>  
              <div class="row">
                  <div class="span12">
-                    <h2><%= "$" + dollar.to_s + details %></h2>
+                    <h4><%= "$" + dollar.to_s + details %></h4>
                   </div>
          </div>
           <% end %>
@@ -99,7 +102,7 @@
          <% Coupon.sort_percent.each do |percent, details| %>  
                    <div class="row">
                        <div class="span12">
-                          <h2><%= percent.to_s + "%" + details %></h2>
+                          <h4><%= percent.to_s + "%" + details %></h4>
                         </div>
                    </div>
           <% end %>
