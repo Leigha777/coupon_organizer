@@ -2,7 +2,7 @@ body {
   background-image: url(https://upload.wikimedia.org/wikipedia/commons/4/43/Milepost_31_storefront.JPG)
 }
 
-#link {
+/* #link {
   background-color: rgba(128, 128, 130, 0.5);
   width: 600px;
   padding: 15px;
@@ -12,21 +12,21 @@ body {
   font-size: 100%;
   font-weight: bold;
   border-radius: 25px;
-}
+} */
 h1 {
   font-weight:bold;
   font-size: 400%;
   text-align: center;
   font-family: 'Raleway Dots',serif;
 }
-h3 {
+h3{
   font-weight:bold;
   text-align: center;
   font-family: 'Raleway',serif;
   font-size: 175%;
 }
 
-form {
+#form {
   background-color: rgba(128, 128, 130, 0.5);
   width: 500px;
   padding: 15px;
