@@ -126,7 +126,7 @@ class Coupon
   Discount Amount: #{@discount_amount}
   Expiration Date: #{@expiration_date}
   Type: #{@type}
-  Other Discriptions: #{@description}"
+  Other Descriptions: #{@description}"
    end
 #    def make_a_date
 #       @expiration_date = @@date
