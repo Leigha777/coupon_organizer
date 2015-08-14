@@ -60,4 +60,10 @@ class MyApp < Sinatra::Base
   get '/puns' do
     erb :puns
   end
+  
+  get '/about' do
+    erb :about
+  end
 end
+
+
