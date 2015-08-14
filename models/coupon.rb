@@ -1,6 +1,5 @@
 # require 'date'
-require 'erb'
-require 'ostruct'
+
 
 class Coupon
     @@coupon_just_names = []
