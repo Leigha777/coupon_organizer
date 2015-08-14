@@ -19,10 +19,11 @@
      <div>
         <h3>Please enter your coupon information below:</h2>
      </div>
-
-   <form method = "POST" action= "/submission">
-
-   <form method="POST" action="/submission">
+<!--FIRST FORM-->
+  <div id="form">
+<form method="POST" action="/submission">
+  
+<!--    <form method="POST" action="/submission"> -->
 
       Store Name:<br>
       <input type="text" name="store_name" placeholder = "Store Name">
@@ -37,7 +38,6 @@
       <input type="text" name="firstname" placeholder = "Discount">
       <br><br>
       Item:<br> 
-<!--       WE HAVE TO FIX THE TYPE PART WITH THE TYPE THING -->
       <select name="type"> 
          <div>
         <option value="" disabled = "disabled" selected="selected">Choose an item</option>
@@ -52,14 +52,14 @@
       </select><br><br>
       Additional Notes:<br>
        <input type="text" name="description">
-
       
-      
-      
-     <br><br>
-
+     <br>
+  </div>
+<!--SECOND FORM-->
+    <div>
        <h3>Please enter your coupon information below:</h2>
-     </div>
+    </div>
+     <div id="form">
    <form method = "POST" action= "/submission">
       Store Name:<br>
       <input type="text" name="store_name1" placeholder = "Store Name">
@@ -88,12 +88,12 @@
       </select><br><br>
       Additional Notes:<br>
        <input type="text" name="description1">
-      
-      
+     </div>
       <br>
-      
-      <br><br>
+      <!--THIRD FORM-->
+      <br>
        <h3>Please enter your coupon information below:</h2>
+       <div id= "form">
       <form method = "POST" action= "/submission">
       Store Name:<br>
       <input type="text" name="store_name2" placeholder = "Store Name">
@@ -122,11 +122,10 @@
       </select><br><br>
       Additional Notes:<br>
        <input type="text" name="description2">
-         
+        
          <br><br>
        <input type="submit" onclick= "alert('Your coupon has been successfuly submitted!')">
-    </form>
-     
+        </div>
     
   </body>
 </html> 
