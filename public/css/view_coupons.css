@@ -11,11 +11,11 @@ body{
   background-image: url("cute.jpg");
   background-size: contain;
 }
-.top{
+div {
+  font-size: 150%;
   font-weight: bold;
-  font-size: 135%;
 }
-p{
+.top{
   text-align: left;
   font-family: Raleway;
   font-size: 125%;
@@ -26,4 +26,23 @@ p{
   border: 1px solid white;
   margin: 30px;
   border-radius: 15px;
+}
+
+h2 {
+  font-size: 300%;
+  color: white;
+  font-family: Raleway Dots;
+}
+.span12{
+  text-align: left;
+  font-family: Raleway;
+  font-size: 125%;
+  color: black;
+  background-color: rgba(255,255,225,0.5);
+  width: 540px;
+  padding: 20px;
+  border: 1px solid white;
+  margin: 30px;
+  border-radius: 15px;
+  
 }
